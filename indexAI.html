@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artificial Intelligence</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+    
+    header {
+      color: #fff;
+      background-color: #333;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      color: #ffffff;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .menu {
+      display: none;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      background-color: #333;
+      padding: 10px;
+      list-style-type: none;
+      margin: 0;
+      z-index: 1;
+    }
+
+    .menu li {
+      margin-bottom: 10px;
+    }
+
+    .menu li a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    
+    nav {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    
+    nav a:hover {
+      color: #ccc;
+    }
+    
+    .section {
+      padding: 50px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .card {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    
+    .card-item {
+      background-color: #f5f5f5;
+      padding: 20px;
+      text-align: center;
+      margin: 0 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .card-item:hover {
+      transform: scale(1.05);
+    }
+    
+    footer {
+      background-color: #333;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #ffffff;
+      flex-wrap: wrap;
+    }
+
+    footer p {
+   justify-content: space-between;
+      align-items: center;
+      margin: 0;
+   
+    }
+    
+    .icon{
+      width: 40px;
+     padding: 10px;
+      transition: color 0.3s ease;
+      display: flex;
+      
+    }
+    .main-text{
+      font-size: 20px;
+      margin-bottom: 10px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      background-color: #f1f1f1;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var menuToggle = document.querySelector('.menu-toggle');
+      var menu = document.querySelector('.menu');
+
+      menuToggle.addEventListener('click', function() {
+        menu.style.display = (menu.style.display === 'none') ? 'block' : 'none';
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Artificial Intelligence</h1>
+    <div class="menu-toggle">&#9776;</div>
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </header>
+  
+  <nav>
+    <a href="#intro">Introduction</a>
+    <a href="#types">Types of AI</a>
+    <a href="#applications">Applications</a>
+    <a href="#future">Future of AI</a>
+    <a href="#about">About</a>
+  </nav>
+  
+  <div class="section" id="intro">
+    <h2>Introduction to Artificial Intelligence</h2>
+    <p class="main-text">Artificial Intelligence (AI) is a rapidly advancing field that has the potential to transform various aspects of our lives. AI is the simulation of human intelligence processes by machines, enabling them to perform tasks that typically require human intelligence, such as learning, problem-solving, decision-making, and perception.</p>
+    <div class="card">
+      <div class="card-item">
+        <h3>What is AI?</h3>
+        <p>AI refers to the development of computer systems that can perform tasks that would typically require human intelligence and decision-making.</p>
+      </div>
+      <div class="card-item">
+        <h3>History of AI</h3>
+        <p>The origins of AI can be traced back to the 1950s, when researchers began exploring the possibility of creating machines that could think and learn like humans.</p>
+      </div>
+      <div class="card-item">
+        <h3>Importance of AI</h3>
+        <p>AI has the potential to revolutionize various industries, improve decision-making, and enhance our daily lives. It is a key driver of technological progress and innovation.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section" id="types">
+    <h2>Types of Artificial Intelligence</h2>
+    <p class="main-text">AI can be classified into different types based on its capabilities and level of intelligence. Understanding the various types of AI is crucial for understanding its potential applications and limitations.</p>
+    <div class="card">
+      <div class="card-item">
+        <h3>Narrow AI</h3>
+        <p>Narrow AI, also known as weak AI, is designed to perform specific tasks or solve particular problems. It is not capable of general intelligence and cannot adapt to new situations.</p>
+      </div>
+      <div class="card-item">
+        <h3>General AI</h3>
+        <p>General AI, also known as strong AI, is the long-term goal of AI research. It refers to AI systems that can perform any intellectual task that a human can, with the ability to learn, reason, and adapt to new situations.</p>
+      </div>
+      <div class="card-item">
+        <h3>Artificial Superintelligence</h3>
+        <p>Artificial Superintelligence (ASI) is a hypothetical future state of AI that exceeds human intelligence and capabilities across all domains, including cognitive, social, and general problem-solving abilities.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section" id="applications">
+    <h2>Applications of Artificial Intelligence</h2>
+    <p class="main-text">AI has a wide range of applications across various industries, from healthcare and finance to transportation and entertainment. Here are some of the key areas where AI is making a significant impact.</p>
+    <div class="card">
+      <div class="card-item">
+        <h3>Healthcare</h3>
+        <p>AI is transforming healthcare by improving medical diagnosis, drug discovery, personalized treatment plans, and patient care management.</p>
+      </div>
+      <div class="card-item">
+        <h3>Robotics and Automation</h3>
+        <p>AI-powered robots and automation systems are revolutionizing industries by improving efficiency, productivity, and safety.</p>
+      </div>
+      <div class="card-item">
+        <h3>Personalized Recommendations</h3>
+        <p>AI-powered recommendation systems are widely used in e-commerce, streaming services, and social media to provide personalized product and content recommendations.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section" id="future">
+    <h2>The Future of Artificial Intelligence</h2>
+    <p class="main-text">As AI continues to evolve, it is expected to have a profound impact on various aspects of our lives. Here are some glimpses into the future of AI.</p>
+    <div class="card">
+      <div class="card-item">
+        <h3>Advancements in AI</h3>
+        <p>Continued advancements in AI algorithms, computing power, and data availability will lead to more powerful and versatile AI systems.</p>
+      </div>
+      <div class="card-item">
+        <h3>AI and Automation</h3>
+        <p>AI-powered automation will likely replace many routine and repetitive tasks, leading to increased efficiency and productivity.</p>
+      </div>
+      <div class="card-item">
+        <h3>AI and Human-Machine Collaboration</h3>
+        <p>AI will increasingly work alongside humans, enhancing our abilities and enabling more collaborative problem-solving and decision-making.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section" id="about">
+    <h2>About This Website</h2>
+    <p class="main-text">This website is dedicated to providing comprehensive information about the field of Artificial Intelligence. Our goal is to educate and inform our readers about the latest advancements, applications, and future prospects of AI technology. We strive to present the information in a clear and engaging manner, with a focus on practical implications and real-world examples.</p>
+     </div>
+  
+     <footer>
+      <p>&copy; Programmed by: AbdulRahman AlShammari</p><br>
+       <p>AJA LORM</p>
+         <p>Email:Alshammri095@gmail.com</p>
+         
+     <a href=""><img class="icon" src="twitter.png" alt=""></a>
+     <a href=""><img class="icon" src="linkedin.png" alt=""> </a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer Networks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+     color: #fff;}
+
+    .menu-toggle {
+      color: #ffffff;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .menu {
+      display: none;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      background-color: #333;
+      padding: 10px;
+      list-style-type: none;
+      margin: 0;
+      z-index: 1;
+    }
+
+    .menu li {
+      margin-bottom: 10px;
+    }
+
+    .menu li a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    
+    .nav-toggle {
+      display: none;
+      cursor: pointer;
+    }
+    
+    .nav-toggle span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      margin: 5px 0;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    
+    nav ul li {
+      margin-right: 20px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+    main {
+      padding: 40px;
+    }
+    
+    .section {
+      margin-bottom: 60px;
+    }
+    
+    .section-title {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+    }
+    
+    .card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 0 20px;
+      width: 300px;
+      transition: transform 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: scale(1.05);
+    }
+    
+    .card-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .card-content {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    footer {
+      background-color: #333;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #ffffff;
+      flex-wrap: wrap;
+    }
+
+    footer p {
+   justify-content: space-between;
+      align-items: center;
+      margin: 0;
+   
+    }
+    
+    .icon{
+      width: 40px;
+     padding: 10px;
+      transition: color 0.3s ease;
+      
+    }
+   
+      .main-text{
+        font-size: 20px;
+        margin-bottom: 10px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        background-color: #ffffff;
+        padding: 10px;
+        border-radius: 5px;
+      }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var menuToggle = document.querySelector('.menu-toggle');
+      var menu = document.querySelector('.menu');
+
+      menuToggle.addEventListener('click', function() {
+        menu.style.display = (menu.style.display === 'none') ? 'block' : 'none';
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo">Computer Networks</div>
+    <div class="menu-toggle">&#9776;</div>
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </header>
+  
+  <main>
+    <section class="section">
+      <h2 class="section-title">Introduction to Computer Networks</h2>
+      <p class="main-text">Computer networks are the foundation of modern communication and information sharing. They enable the interconnection of devices, allowing for the exchange of data, resources, and services. This section provides a comprehensive overview of computer networks, including their history, significance, and fundamental concepts.</p>
+      
+      <div class="card-container">
+        <div class="card">
+          <h3 class="card-title">Network Basics</h3>
+          <p class="card-content">Explore the basic components and structure of computer networks, including the roles of clients, servers, and various network devices.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Network Protocols</h3>
+          <p class="card-content">Understand the essential protocols that govern communication and data exchange within computer networks, such as TCP/IP and OSI models.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Network Topologies</h3>
+          <p class="card-content">Learn about the different network topologies, their advantages, and how they shape the structure and functionality of computer networks.</p>
+        </div>
+      </div>
+    </section>
+   
+    <section class="section">
+      <h2 class="section-title">Types of Computer Networks</h2>
+      <p class="main-text">Computer networks can be classified into various types based on their size, geographical coverage, and purpose. This section explores the different categories of networks, their characteristics, and their applications.</p>
+      
+      <div class="card-container">
+        <div class="card">
+          <h3 class="card-title">Local Area Networks (LANs)</h3>
+          <p class="card-content">Discover the features and benefits of Local Area Networks (LANs), which are commonly used in homes, offices, and small-scale environments.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Wide Area Networks (WANs)</h3>
+          <p class="card-content">Explore the world of Wide Area Networks (WANs), which connect geographically dispersed locations and enable long-distance communication.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Wireless Networks</h3>
+          <p class="card-content">Understand the principles and applications of wireless networks, including Wi-Fi, Bluetooth, and cellular networks, and how they have transformed communication.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2 class="section-title">Network Components and Infrastructure</h2>
+      <p class="main-text">Computer networks consist of various hardware and software components that work together to enable effective communication and data exchange. This section delves into the key elements that make up a network infrastructure.</p>
+      
+      <div class="card-container">
+        <div class="card">
+          <h3 class="card-title">Network Devices</h3>
+          <p class="card-content">Explore the essential network devices, such as routers, switches, hubs, and firewalls, and understand their roles in establishing and managing network connectivity.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Network Media</h3>
+          <p class="card-content">Understand the different types of network media, including wired (Ethernet, fiber optic) and wireless (Wi-Fi, Bluetooth), and their impact on network performance and reliability.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Network Software</h3>
+          <p class="card-content">Explore the essential software components, such as operating systems, network protocols, and management tools, that enable the seamless operation and administration of computer networks.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">Network Protocols and Standards</h2>
+      <p class="main-text">Network protocols are the set of rules and conventions that govern the communication and data exchange within computer networks. This section delves into the most prominent network protocols and their role in ensuring efficient and reliable network operations.</p>
+      
+      <div class="card-container">
+        <div class="card">
+          <h3 class="card-title">TCP/IP Protocol Suite</h3>
+          <p class="card-content">Understand the Transmission Control Protocol/Internet Protocol (TCP/IP) suite, the foundational protocol that underpins the internet and modern network communication.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">OSI Model</h3>
+          <p class="card-content">Explore the Open Systems Interconnection (OSI) reference model, which provides a conceptual framework for understanding the different layers of network communication.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Network Security Protocols</h3>
+          <p class="card-content">Learn about the key security protocols, such as SSL/TLS and IPsec, that safeguard network communications and protect against various cyber threats.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; Programmed by: AbdulRahman AlShammari</p><br>
+     <p>AJA LORM</p>
+       <p>Email:Alshammri095@gmail.com</p>  
+   <a href=""><img class="icon" src="twitter.png" alt=""></a>
+   <a href=""><img class="icon" src="linkedin.png" alt=""> </a>
+   <a href=""><img class="icon" src="github.png" alt=""></a>
+  </footer>
+</body>
+</html>

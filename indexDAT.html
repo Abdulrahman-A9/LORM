@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Analysis</title>
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }   
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+          
+          .logo {
+            font-size: 24px;
+            font-weight: bold;
+           color: #fff;}
+      
+          .menu-toggle {
+            color: #ffffff;
+            font-size: 24px;
+            cursor: pointer;
+          }
+      
+          .menu {
+            display: none;
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            background-color: #333;
+            padding: 10px;
+            list-style-type: none;
+            margin: 0;
+            z-index: 1;
+          }
+      
+          .menu li {
+            margin-bottom: 10px;
+          }
+      
+          .menu li a {
+            color: #ffffff;
+            text-decoration: none;
+          }
+        
+
+    main {
+      padding: 40px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 20px;
+      width: 300px;
+      margin: 0 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #666;
+      line-height: 1.5;
+    }
+    footer {
+      background-color: #333;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #ffffff;
+      flex-wrap: wrap;
+    }
+
+    footer p {
+   justify-content: space-between;
+      align-items: center;
+      margin: 0;
+   
+    }
+    
+    .icon{
+      width: 40px;
+     padding: 10px;
+      transition: color 0.3s ease;
+      display: flex;
+      
+    }
+    .main-text{
+        font-size: 20px;
+        margin-bottom: 10px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        background-color: #ffffff;
+        padding: 10px;
+        border-radius: 7px;
+      }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var menuToggle = document.querySelector('.menu-toggle');
+      var menu = document.querySelector('.menu');
+
+      menuToggle.addEventListener('click', function() {
+        menu.style.display = (menu.style.display === 'none') ? 'block' : 'none';
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo">Data Analysis</div>
+    <div class="menu-toggle">&#9776;</div>
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <section>
+      <h2>Data Analysis: An Overview</h2>
+      <p class="main-text">Data analysis is the process of inspecting, cleansing, transforming, and modeling data to discover useful information, draw conclusions, and support decision-making. It is a crucial aspect of various fields, including business, science, and technology.</p>
+      <div class="card-container">
+        <div class="card">
+          <h3>Types of Data Analysis</h3>
+          <p>Data analysis can be broadly classified into different types, such as descriptive, diagnostic, predictive, and prescriptive analysis. Each type serves a specific purpose and provides valuable insights.</p>
+        </div>
+        <div class="card">
+          <h3>Data Analysis Tools</h3>
+          <p>There are numerous tools and technologies available for data analysis, including spreadsheet software, statistical software, data visualization tools, and programming languages like Python and R.</p>
+        </div>
+        <div class="card">
+          <h3>Data Analysis Methodologies</h3>
+          <p>Data analysis involves various methodologies, such as regression analysis, cluster analysis, and time series analysis, which help in extracting meaningful insights from data.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Types of Data</h2>
+      <p class="main-text">Data can be classified into different types, each with unique characteristics and applications. Understanding the various types of data is essential for effective data analysis.</p>
+      <div class="card-container">
+        <div class="card">
+          <h3>Quantitative Data</h3>
+          <p>Quantitative data is numerical data that can be measured and expressed in quantitative terms, such as sales figures, temperatures, or product weights.</p>
+        </div>
+        <div class="card">
+          <h3>Qualitative Data</h3>
+          <p>Qualitative data is non-numerical data that represents attributes or characteristics, such as customer feedback, opinions, or observations.</p>
+        </div>
+        <div class="card">
+          <h3>Categorical Data</h3>
+          <p>Categorical data is data that can be divided into distinct groups or categories, such as gender, location, or product type.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Data Analysis Techniques</h2>
+      <p class="main-text">Data analysis involves the application of various techniques to extract meaningful insights from data. These techniques range from basic statistical analysis to advanced machine learning algorithms.</p>
+      <div class="card-container">
+        <div class="card">
+          <h3>Descriptive Analysis</h3>
+          <p>Descriptive analysis focuses on summarizing and describing the key characteristics of a dataset, such as measures of central tendency and dispersion.</p>
+        </div>
+        <div class="card">
+          <h3>Inferential Analysis</h3>
+          <p>Inferential analysis involves drawing conclusions about a population based on a sample of data, using techniques like hypothesis testing and regression analysis.</p>
+        </div>
+        <div class="card">
+          <h3>Predictive Analysis</h3>
+          <p>Predictive analysis uses statistical models and machine learning algorithms to forecast future trends or outcomes based on historical data.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Data Analysis Tools and Technologies</h2>
+      <p class="main-text">There are numerous tools and technologies available for data analysis, ranging from traditional spreadsheet software to advanced programming languages and data visualization platforms.</p>
+      <div class="card-container">
+        <div class="card">
+          <h3>Spreadsheet Software</h3>
+          <p>Spreadsheet software, such as Microsoft Excel and Google Sheets, provide basic data analysis capabilities, including sorting, filtering, and simple statistical analysis.</p>
+        </div>
+        <div class="card">
+          <h3>Statistical Software</h3>
+          <p>Statistical software, like SPSS and SAS, offer more advanced data analysis features, such as regression analysis, ANOVA, and time series analysis.</p>
+        </div>
+        <div class="card">
+          <h3>Programming Languages</h3>
+          <p>Programming languages like Python, R, and SQL are powerful tools for data analysis, allowing for the creation of custom algorithms and the integration of various data sources.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Data Analysis in Practice</h2>
+      <p class="main-text">Data analysis is applied in a wide range of industries and domains, from business intelligence to scientific research. Understanding the practical applications of data analysis is crucial for effective decision-making.</p>
+      <div class="card-container">
+        <div class="card">
+          <h3>Business Intelligence</h3>
+          <p>Data analysis is widely used in business intelligence to make informed decisions, optimize operations, and gain a competitive advantage.</p>
+        </div>
+        <div class="card">
+          <h3>Healthcare Analytics</h3>
+          <p>Data analysis in healthcare can help in disease prevention, patient care optimization, and the development of new treatments and therapies.</p>
+        </div>
+        <div class="card">
+          <h3>Scientific Research</h3>
+          <p>Data analysis is essential in scientific research, enabling researchers to test hypotheses, identify patterns, and draw meaningful conclusions from their data.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; Programmed by: AbdulRahman AlShammari</p><br>
+     <p>AJA LORM</p>
+       <p>Email:Alshammri095@gmail.com</p>
+       
+   <a href=""><img class="icon" src="twitter.png" alt=""></a>
+   <a href=""><img class="icon" src="linkedin.png" alt=""> </a>
+   <a href=""><img class="icon" src="github.png" alt=""></a>
+ </footer>
+</body>
+</html>

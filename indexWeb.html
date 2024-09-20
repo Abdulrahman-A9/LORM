@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Development</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      color: #fff;
+      background-color: #333;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      color: #ffffff;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .menu {
+      display: none;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      background-color: #333;
+      padding: 10px;
+      list-style-type: none;
+      margin: 0;
+      z-index: 1;
+    }
+
+    .menu li {
+      margin-bottom: 10px;
+    }
+
+    .menu li a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px;
+    }
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .card {
+      background-color: #f1f1f1;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      overflow: hidden;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    footer {
+      background-color: #333;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #ffffff;
+      flex-wrap: wrap;
+    }
+
+    footer p {
+   justify-content: space-between;
+      align-items: center;
+      margin: 0;
+   
+    }
+    
+    .icon{
+      width: 40px;
+     padding: 10px;
+      transition: color 0.3s ease;
+      display: flex;
+      
+    }
+    .main-text{
+      font-size: 20px;
+      margin-bottom: 10px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      background-color: #f1f1f1;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var menuToggle = document.querySelector('.menu-toggle');
+      var menu = document.querySelector('.menu');
+
+      menuToggle.addEventListener('click', function() {
+        menu.style.display = (menu.style.display === 'none') ? 'block' : 'none';
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Web Development</h1>
+    <div class="menu-toggle">&#9776;</div>
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <!-- Web Development Overview -->
+    <section>
+      <h2>Web Development Overview</h2>
+      <p class="main-text">Web development is the process of building and maintaining websites. It involves a wide range of skills, including HTML, CSS, JavaScript, server-side programming, database management, and more. In this section, we'll explore the various aspects of web development in detail.</p>
+      <!-- Cards -->
+      <div class="card">
+        <div class="card-content">
+          <h3>Front-End Development</h3>
+          <p>Front-end development focuses on the client-side of a website, creating the user interface and user experience. It involves the use of HTML, CSS, and JavaScript to build the visual and interactive elements of a website.</p>
+        </div>
+        <div class="card-footer">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h3>Back-End Development</h3>
+          <p>Back-end development focuses on the server-side of a website, handling the logic, data processing, and integration with databases. It involves the use of server-side programming languages, such as PHP, Python, or Node.js, as well as database management systems.</p>
+        </div>
+        <div class="card-footer">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h3>API Development</h3>
+          <p>API (Application Programming Interface) development is the process of creating interfaces that allow different software components to communicate with each other. APIs are essential for building robust and scalable web applications.</p>
+        </div>
+        <div class="card-footer">
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="front-end">
+      <h2>Front-End Development</h2>
+      <p class="main-text">Front-end development is the process of creating the visual and interactive elements of a website or web application. It involves the use of HTML, CSS, and JavaScript to build the user interface and ensure a seamless user experience. In this section, we'll dive deep into the world of front-end development and explore the various tools, frameworks, and best practices that are used in the industry.</p>
+   
+      <div class="card">
+        <div class="card-content">
+          <h3>HTML and CSS</h3>
+          <p>HTML (Hypertext Markup Language) and CSS (Cascading Style Sheets) are the foundation of front-end development. They are used to structure the content and style the appearance of a website, respectively. In this card, we'll explore the basics of HTML and CSS, as well as advanced techniques and best practices.</p>
+        </div>
+        <div class="card-footer">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h3>JavaScript and DOM</h3>
+          <p>JavaScript is a powerful programming language that is used to add interactivity and dynamic behavior to websites. It allows developers to manipulate the Document Object Model (DOM), which represents the structure of a web page, and create responsive and engaging user experiences.</p>
+        </div>
+        <div class="card-footer">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h3>Front-End Frameworks and Libraries</h3>
+          <p>Front-end development has seen the rise of various frameworks and libraries, such as React, Angular, and Vue.js, which provide pre-built components and tools to speed up the development process and create more maintainable and scalable applications.</p>
+        </div>
+        <div class="card-footer">
+        </div>
+      </div>
+    </section>
+
+   
+    <section id="back-end">
+      <h2>Back-End Development</h2>
+      <p class="main-text">Back-end development focuses on the server-side of a web application, handling the logic, data processing, and integration with databases. It involves the use of server-side programming languages, such as PHP, Python, or Node.js, as well as database management systems. In this section, we'll explore the various aspects of back-end development and how they contribute to the overall functionality and performance of a web application.</p>
+   
+      <div class="card">
+        <div class="card-content">
+          <h3>Server-Side Programming</h3>
+          <p>Server-side programming is the process of writing code that runs on the server, processing requests, interacting with databases, and generating dynamic content. This card will cover popular server-side programming languages, such as PHP, Python, and Node.js, and their respective frameworks and tools.</p>
+        </div>
+        <div class="card-footer">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h3>Database Management</h3>
+          <p>Effective data management is a critical aspect of back-end development. This card will explore the various database management systems, such as MySQL, PostgreSQL, and MongoDB, and how they can be integrated into web applications to store and retrieve data efficiently.</p>
+        </div>
+        <div class="card-footer">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h3>API Integration</h3>
+          <p>APIs (Application Programming Interfaces) are the bridges that connect different software components, allowing them to communicate and exchange data. This card will discuss the importance of API development and integration in the context of back-end web development.</p>
+        </div>
+        <div class="card-footer">
+        </div>
+      </div>
+    </section>
+    <section id="api">
+      <h2>API Development</h2>
+      <p class="main-text">API (Application Programming Interface) development is the process of creating interfaces that allow different software components to communicate with each other. APIs are essential for building robust and scalable web applications, as they enable the integration of various services and data sources. In this section, we'll explore the fundamentals of API development and its role in modern web development.</p>
+     
+      <div class="card">
+        <div class="card-content">
+          <h3>REST API</h3>
+          <p>REST (Representational State Transfer) is a popular architectural style for building APIs. This card will cover the principles of REST, including HTTP methods, resource identification, and response formats, as well as best practices for designing and implementing RESTful APIs.</p>
+        </div>
+        <div class="card-footer">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h3>GraphQL API</h3>
+          <p>GraphQL is an alternative to REST APIs, offering a more flexible and efficient way to fetch and manipulate data. This card will introduce the GraphQL query language, its advantages over traditional REST APIs, and how to build and integrate GraphQL APIs into web applications.</p>
+        </div>
+        <div class="card-footer">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h3>API Security and Authentication</h3>
+          <p>Securing APIs is crucial, as they provide access to sensitive data and functionality. This card will discuss common API security practices, such as authentication, authorization, and rate limiting, as well as techniques for ensuring the confidentiality and integrity of API data.</p>
+        </div>
+        <div class="card-footer">
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; Programmed by: AbdulRahman AlShammari</p><br>
+     <p>AJA LORM</p>
+       <p>Email:Alshammri095@gmail.com</p>
+       
+   <a href=""><img class="icon" src="twitter.png" alt=""></a>
+   <a href=""><img class="icon" src="linkedin.png" alt=""> </a>
+   <a href=""><img class="icon" src="github.png" alt=""></a>
+  </footer>
+</body>
+</html>

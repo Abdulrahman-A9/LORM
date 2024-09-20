@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="google-site-verification" content="y3itAQvxkKLCZQjy2WwJWY6jJjVnBktxG28kdXtHUWY" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>AJA LORM</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle, #1a1a2e, #0a0a1d); /* تدرج داكن */
+    }
+    header {
+      background: linear-gradient(to right, #0f4264, #1b1b30);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      color: #ffffff;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .menu {
+      display: none;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      background-color: #1b1b30;
+      padding: 10px;
+      list-style-type: none;
+      margin: 0;
+      z-index: 1;
+    }
+
+    .menu li {
+      margin-bottom: 10px;
+    }
+
+    .menu li a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .main-content {
+      padding: 40px;
+    }
+
+    .welcome-message {
+      background: linear-gradient(to right, #0f4264, #1b1b30);
+      padding: 20px;
+      text-align: center;
+      border-radius: 15px;
+    }
+
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: linear-gradient(to right, #1b1b30, #0f4264); /* تدرج كحلي */
+      padding: 20px;
+      width: 80%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s ease;
+      border-radius: 10px;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #ffffff;
+    }
+
+    .card a {
+      display: block;
+      background-color: #132136;
+      color: #000000;
+      text-decoration: none;
+      padding: 10px 20px;
+      text-align: center;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+      border-radius: 5px;
+    }
+
+    .card a:hover {
+      background-color: #a5a5a5;
+    }
+
+    footer {
+      background: linear-gradient(to right, #0f4264, #1b1b30);
+      padding: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #ffffff;
+      flex-wrap: wrap;
+      border-top: 3px solid #fffdfc; /* خط علوي ملون */
+    }
+
+    footer p {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      font-size: 14px; 
+    }
+
+    footer a {
+      margin: 5px; 
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    footer a:hover {
+      transform: scale(1.1); /* تكبير الأيقونة عند التحويم */
+      color: #132136; /* تغيير اللون عند التحويم */
+    }
+
+    .icon {
+      width: 40px;
+      transition: color 0.3s ease;
+    }
+
+    .articles-section {
+      background-color: rgba(47, 78, 93, 0.144);
+      padding: 40px;
+      margin-top: 70px;
+      border-radius: 30px;
+      margin-bottom: 40px;
+    }
+
+    .articles-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .carde {
+      background: linear-gradient(to right, #1b1b30, #0f4c75); 
+      border-radius: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+      margin: 20px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease-in-out, max-height 0.3s ease-in-out;
+      width: 300px;
+      max-height: 200px;
+      overflow: hidden; 
+      flex: 1 1 300px; 
+    }
+
+    .carde:hover {
+      transform: translateY(-10px);
+    }
+
+    .carde h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .carde p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #ffffff;
+    }
+
+    .carde a {
+      background-color: #132136;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .carde a:hover {
+      background-color: #0c0c0c;
+    }
+
+    .carde.expanded {
+      max-height: 1500px; /* ارتفاع الكارد عند الضغط */
+    }
+
+    .arrow {
+      cursor: pointer;
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    .language-info {
+      display: none;
+      margin-top: 10px;
+      color: #fff;
+    }
+
+    .card1-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .card1 {
+      background: linear-gradient(to right, #1b1b30, #0f4c75); /* تدرج كحلي */
+      border-radius: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+      margin: 20px;
+      padding: 50px;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+      width: 300px;
+      margin-top: 100px;
+      margin-bottom: 70px;
+    }
+
+    .card1:hover {
+      transform: translateY(-10px);
+    }
+
+    .card1 h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .card1 p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #ffffff;
+    }
+
+    .card1 a {
+      background-color: #132136;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .card1 a:hover {
+      background-color: #0c0c0c;
+    }
+  </style>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var menuToggle = document.querySelector('.menu-toggle');
+      var menu = document.querySelector('.menu');
+
+      menuToggle.addEventListener('click', function() {
+        menu.style.display = (menu.style.display === 'none') ? 'block' : 'none';
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo">AJA LORM</div>
+    <div class="menu-toggle">&#9776;</div>
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </header>
+
+  <div class="main-content">
+    <div class="welcome-message">
+      <h2>Welcome to AJA LORM</h2>
+      <p>Here you can find information about our services and more.</p>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <h3>Cybersecurity</h3>
+        <p>Learn more about our cybersecurity solutions.</p>
+        <a target="_blank" href="indexCyb.html">Learn More</a>
+      </div>
+      <div class="card">
+        <h3>Artificial Intelligence</h3>
+        <p>Discover our AI-powered services.</p>
+        <a target="_blank" href="indexAI.html">Learn More</a>
+      </div>
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>Check out our web development capabilities.</p>
+        <a target="_blank" href="indexWeb.html">Learn More</a>
+      </div>
+      <div class="card">
+        <h3>App Development</h3>
+        <p>Learn about our app development services.</p>
+        <a target="_blank" href="indexApp.html">Learn More</a>
+      </div>
+    </div>
+    <section>
+      <div class="card1-container">
+        <div class="card1">
+          <h1>Computer networks</h1>
+          <h4>You will learn about networks</h4><br>
+          <a href="indexNet.html">LEARN MORE</a>
+        </div>
+        <div class="card1">
+          <h1>Game Development</h1>
+          <h4>You will learn about Game Development</h4><br>
+          <a href="indexGAM.html">LEARN MORE</a>
+        </div>
+        <div class="card1">
+          <h1>Data Analysis</h1>
+          <h4>You will learn about Data Analysis</h4><br>
+          <a href="indexDAT.html">LEARN MORE</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="articles-section">
+      <h1>Programming languages</h1>
+      <h5>Touch card</h5>
+      <div class="articles-grid">
+        <div class="carde">
+          <h1>PHP</h1>
+          <p>- Click for more information</p>
+          <a>More</a><br><br><br><br><br>
+          <p class="additional-info" style="display: none;">
+            <h2>PHP</h2>
+            <p>
+              PHP (Hypertext Preprocessor) is a widely-used open-source server-side scripting language that is primarily used for web development.
+               It was created in the mid-1990s and has since become one of the most popular languages for building dynamic websites and web applications.<br><br>
+              Some key features of PHP include:<br>
+              
+              - Server-side execution - PHP code runs on the web server, generating HTML pages that are then sent to the client's web browser.<br>
+              - Ease of use - PHP has a relatively simple and straightforward syntax, making it relatively easy to learn for beginners.<br>
+              - Large ecosystem - There is a vast and active community of PHP developers, and a large number of frameworks, libraries, and tools available. <br>
+              Overall, PHP is a powerful and flexible language that remains one of the most widely adopted technologies for modern web development.
+            </p>
+          </p>
+        </div>
+        
+        <div class="carde">
+          <h1>C++</h1>
+          <p>- Click for more information</p>
+          <a>More</a><br><br><br><br><br>
+          <p class="additional-info" style="display: none;">
+            <h2>C++</h2>
+            <p>
+              C++ is a general-purpose, object-oriented programming language that was developed in the early 1980s.
+               It is an extension of the C programming language, adding object-oriented features and other enhancements.<br><br>
+              
+              Some key characteristics of C++ include:<br>
+              
+              - Low-level control - C++ provides close-to-the-metal access to computer hardware, allowing for high performance and system-level programming.<br>
+              - Portability - C++ code can be compiled and run on a variety of platforms and operating systems.<br>
+              - Object-oriented - C++ supports object-oriented programming concepts like classes, inheritance, and polymorphism.<br>
+              Overall, C++ is a powerful, flexible, and efficient programming language that is commonly used for developing a wide range of software applications and systems.
+            </p>
+          </p>
+        </div>
+        
+        <div class="carde">
+          <h1>R</h1>
+          <p>- Click for more information</p>
+          <a>More</a><br><br><br><br><br>
+          <p class="additional-info" style="display: none;">
+            <h2>R</h2>
+            <p>R is an open-source programming language and software environment for statistical computing and graphics.
+               It was developed in the mid-1990s and has since become a widely used tool for data analysis, visualization,
+                and statistical modeling.<br><br>
+              
+              Some key features of R include:<br>
+              
+              - Statistical analysis - R provides a vast array of statistical and modeling techniques for analyzing data.<br>
+              - Data visualization - R has powerful graphics capabilities for creating high-quality plots, charts, and visualizations.<br>
+              - Large package ecosystem - R has an extensive repository of user-contributed packages that extend its functionality.<br>
+               
+              Overall, R is a versatile and powerful tool that is particularly well-suited for statistical analysis, data science, and research applications. It is widely used in academia, research institutions, and various industries.
+            </p>
+          </p>
+        </div>
+        
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              const cards = document.querySelectorAll('.carde');
+              cards.forEach(card => {
+                  card.addEventListener('click', function() {
+                      card.classList.toggle('expanded');
+                      const additionalInfo = card.querySelector('.additional-info');
+                      additionalInfo.style.display = additionalInfo.style.display === 'block' ? 'none' : 'block';
+                  });
+              });
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; Programmed by: AbdulRahman AlShammari</p>
+    <p>AJA LORM</p>
+    <p>Email: <a href="mailto:Alshammri095@gmail.com" style="color: #8ed8ff;">Alshammri095@gmail.com</a></p>
+    <div>
+      <a href="#"><img class="icon" src="twitter.png" alt="Twitter"></a>
+      <a href="#"><img class="icon" src="linkedin.png" alt="LinkedIn"></a>
+      <a href="#"><img class="icon" src="github.png" alt="GitHub"></a>
+    </div>
+  </footer>
+</body>
+</html>

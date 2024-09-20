@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Development</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+       color: #fff;}
+  
+      .menu-toggle {
+        color: #ffffff;
+        font-size: 24px;
+        cursor: pointer;
+      }
+  
+      .menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: #333;
+        padding: 10px;
+        list-style-type: none;
+        margin: 0;
+        z-index: 1;
+      }
+  
+      .menu li {
+        margin-bottom: 10px;
+      }
+  
+      .menu li a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+    main {
+      padding: 40px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    .section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .card {
+      background-color: #f0f0f0;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin: 0 20px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+      width: 200px;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    footer {
+      background-color: #333;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #ffffff;
+      flex-wrap: wrap;
+    }
+
+    footer p {
+   justify-content: space-between;
+      align-items: center;
+      margin: 0;
+   
+    }
+    
+    .icon{
+      width: 40px;
+     padding: 10px;
+      transition: color 0.3s ease;
+      display: flex;
+      
+    }
+    .main-text{
+        font-size: 20px;
+        margin-bottom: 10px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        background-color: #e6e6e6;
+        padding: 10px;
+        border-radius: 7px;
+      }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var menuToggle = document.querySelector('.menu-toggle');
+      var menu = document.querySelector('.menu');
+
+      menuToggle.addEventListener('click', function() {
+        menu.style.display = (menu.style.display === 'none') ? 'block' : 'none';
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Game Development</h1>
+    <div class="menu-toggle">&#9776;</div>
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <section class="section" id="introduction">
+      <h2>Introduction to Game Development</h2>
+      <p class="main-text">Game development is the process of creating video games, which involves a wide range of skills and disciplines, including programming, art, design, and project management. Developers use various tools, languages, and game engines to bring their ideas to life and create engaging and immersive gaming experiences for players.</p>
+      <div class="card-container">
+        <div class="card">
+          <h3>What is Game Development?</h3>
+          <p>Game development is the art of creating interactive software that allows users to play and enjoy a game. It involves a range of disciplines, including programming, art, design, and more.</p>
+        </div>
+        <div class="card">
+          <h3>History of Game Development</h3>
+          <p>The history of game development dates back to the 1970s, with the creation of the first video games. Over the decades, the industry has evolved, with advancements in technology and the emergence of new platforms and genres.</p>
+        </div>
+        <div class="card">
+          <h3>Career Opportunities in Game Development</h3>
+          <p>The game development industry offers a variety of career opportunities, including game designers, programmers, artists, audio engineers, and project managers, among others.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="game-types">
+      <h2>Types of Games</h2>
+      <p class="main-text">Games can be classified into various genres and types, each with its own unique characteristics and gameplay mechanics. Some of the most common game types include action, adventure, puzzle, role-playing, strategy, and simulation games.</p>
+      <div class="card-container">
+        <div class="card">
+          <h3>Action Games</h3>
+          <p>Action games emphasize quick reflexes, hand-eye coordination, and problem-solving skills. They often involve fast-paced gameplay, such as shooting, platforming, or fighting.</p>
+        </div>
+        <div class="card">
+          <h3>Adventure Games</h3>
+          <p>Adventure games focus on exploration, storytelling, and problem-solving. They typically involve navigating through environments, interacting with characters, and solving puzzles.</p>
+        </div>
+        <div class="card">
+          <h3>Puzzle Games</h3>
+          <p>Puzzle games challenge players to solve logical or spatial problems, often through the manipulation of objects or patterns. They can be casual or more complex in nature.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="development-tools">
+      <h2>Game Development Tools</h2>
+      <p class="main-text">Game developers use a variety of tools to create and manage their projects. These tools can include integrated development environments (IDEs), game engines, 3D modeling software, and more. The choice of tools depends on the specific needs of the project and the developer's preferences.</p>
+      <div class="card-container">
+        <div class="card">
+          <h3>Integrated Development Environments (IDEs)</h3>
+          <p>IDEs, such as Visual Studio, Eclipse, and IntelliJ IDEA, provide a comprehensive environment for writing, testing, and debugging code.</p>
+        </div>
+        <div class="card">
+          <h3>Game Engines</h3>
+          <p>Game engines, like Unity, Unreal Engine, and Godot, offer a complete set of tools and frameworks for building and deploying games across various platforms.</p>
+        </div>
+        <div class="card">
+          <h3>3D Modeling Software</h3>
+          <p>Tools like Blender, Maya, and 3DS Max allow game developers to create 3D models, textures, and animations for their games.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="programming-languages">
+      <h2>Programming Languages for Game Development</h2>
+      <p class="main-text">Game development requires a variety of programming languages, depending on the specific needs of the project and the game engine or platform being used. Some of the most common languages used in game development include C++, C#, Java, Python, and JavaScript.</p>
+      <div class="card-container">
+        <div class="card">
+          <h3>C++</h3>
+          <p>C++ is a powerful, low-level programming language that is widely used in game development for its performance and control over hardware resources.</p>
+        </div>
+        <div class="card">
+          <h3>C#</h3>
+          <p>C# is a popular language for game development, especially when working with the Unity game engine. It provides a modern, object-oriented approach to programming.</p>
+        </div>
+        <div class="card">
+          <h3>Python</h3>
+          <p>Python is a versatile, high-level programming language that is often used for rapid prototyping, scripting, and game engine development.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="game-engines">
+      <h2>Game Engines</h2>
+      <p class="main-text">Game engines are software frameworks that provide a comprehensive set of tools and APIs for building and deploying games across various platforms. Some of the most popular game engines include Unity, Unreal Engine, and Godot.</p>
+      <div class="card-container">
+        <div class="card">
+          <h3>Unity</h3>
+          <p>Unity is a cross-platform game engine that is widely used for developing 2D and 3D games for a variety of platforms, including desktop, mobile, and consoles.</p>
+        </div>
+        <div class="card">
+          <h3>Unreal Engine</h3>
+          <p>Unreal Engine is a powerful, feature-rich game engine that is particularly well-suited for creating high-quality, visually stunning games, especially for the PC and console platforms.</p>
+        </div>
+        <div class="card">
+          <h3>Godot</h3>
+          <p>Godot is a free and open-source game engine that is gaining popularity for its flexibility, ease of use, and cross-platform capabilities.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Programmed by: AbdulRahman AlShammari</p><br>
+     <p>AJA LORM</p>
+       <p>Email:Alshammri095@gmail.com</p>
+       
+   <a href=""><img class="icon" src="twitter.png" alt=""></a>
+   <a href=""><img class="icon" src="linkedin.png" alt=""> </a>
+   <a href=""><img class="icon" src="github.png" alt=""></a>
+  </footer>
+</body>
+</html>
